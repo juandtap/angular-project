@@ -2,33 +2,34 @@
 <a target="_blank" href="https://angular.io/start">
   Learn more about Angular
 </a>
+<br />
+<a href="./component1/component1.component.html">Componente</a>
+
 <h2>{{title}}</h2>
-<br/>
+<br />
 <label for="txtA"> A: </label>
-<input type="text" id="txtA" [(ngModel)]="a"/>
-<br/>
+<input type="text" id="txtA" [(ngModel)]="a" />
+<br />
 <label for="txtB"> B: </label>
-<input type="text" id="txtB" [(ngModel)]="b"/>
-<br/>
-<hr>
+<input type="text" id="txtB" [(ngModel)]="b" />
+<br />
+<br />
 
-<button (click)="calcular()"> Calcular</button>
+<button (click)="calcular()">Calcular</button>
 
-<p>
-  Suma = {{suma}}
+<p>Suma = {{suma}}</p>
 
+<p>Resta = {{resta}}</p>
 
-<p>
-  Resta = {{resta}}
-</p>
+<p>Producto = {{producto}}</p>
 
-
-
-<p>
-  Producto = {{producto}}
-</p>
+<p>Division = {{division}}</p>
 
 
-<p>
-  Division = {{division}}
-</p>
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
+<hr />
+<app-component1 name='by diego' (newItemEvent)="addItem($event)"></app-component1>
+
+<!-- <app-component1 [name]="''+suma"></app-component1> -->
